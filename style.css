@@ -1,99 +1,45 @@
-/* إعدادات عامة */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #001f3f; /* لون الخلفية الداكن */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px; /* مسافة أمان للهواتف الصغيرة */
-}
-
-/* الحاوية الرئيسية */
-.main-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-/* البطاقة البيضاء */
-.card {
-    background-color: #ffffff;
-    width: 100%;
-    max-width: 450px; /* أقصى عرض للبطاقة في الشاشات الكبيرة */
-    padding: 40px 25px;
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-}
-
-/* الشعار */
-.logo-container {
-    margin-bottom: 20px;
-}
-
+/* تنسيق اللوغو ليصبح دائرياً */
 .profile-img {
-    width: 120px;
-    max-width: 40%; /* يصغر الشعار تلقائياً إذا كانت الشاشة ضيقة جداً */
-    height: auto;
+    width: 120px;          /* يمكنك تغيير الحجم حسب رغبتك */
+    height: 120px;         /* يجب أن يكون الطول مساوياً للعرض */
+    border-radius: 50%;    /* هذا السطر هو المسؤول عن الدائرة */
+    object-fit: cover;     /* لضمان عدم تمدد الصورة بشكل سيء */
+    border: 3px solid #0056b3; /* إطار اختياري لإبراز الدائرة */
+    margin-bottom: 15px;
 }
 
-/* النصوص */
-.name {
-    font-size: 24px;
-    color: #2c3e50;
-    margin-bottom: 8px;
-}
-
-.title {
-    font-size: 16px;
-    color: #7f8c8d;
-    margin-bottom: 35px;
-}
-
-/* الروابط */
-.links-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* تنسيق الأيقونة الصغيرة داخل الأزرار (إذا استبدلت الأيقونة بلوغو) */
+.mini-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .link-btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
     width: 100%;
     padding: 16px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     color: #0056b3;
     border: 2px solid #0056b3;
     border-radius: 12px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* تأثير عند تمرير الفأرة أو الضغط */
-.link-btn:hover, .link-btn:active {
+.link-btn i {
+    font-size: 22px;
+}
+
+.link-btn:hover {
     background-color: #0056b3;
     color: #ffffff;
-    transform: translateY(-2px); /* حركة بسيطة للأعلى */
-}
-
-/* تعديلات للشاشات الصغيرة جداً (مثل iPhone SE) */
-@media (max-width: 350px) {
-    .card {
-        padding: 25px 15px;
-    }
-    .name {
-        font-size: 20px;
-    }
-    .link-btn {
-        padding: 12px;
-        font-size: 16px;
-    }
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
 }
