@@ -1,45 +1,55 @@
-/* تنسيق اللوغو ليصبح دائرياً */
-.profile-img {
-    width: 120px;          /* يمكنك تغيير الحجم حسب رغبتك */
-    height: 120px;         /* يجب أن يكون الطول مساوياً للعرض */
-    border-radius: 50%;    /* هذا السطر هو المسؤول عن الدائرة */
-    object-fit: cover;     /* لضمان عدم تمدد الصورة بشكل سيء */
-    border: 3px solid #0056b3; /* إطار اختياري لإبراز الدائرة */
-    margin-bottom: 15px;
-}
-
-/* تنسيق الأيقونة الصغيرة داخل الأزرار (إذا استبدلت الأيقونة بلوغو) */
-.mini-logo {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.link-btn {
+/* تنسيق الحاوية الرئيسية */
+.logo-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* جعل اللوغو العلوي دائرة مثالية */
+.profile-img {
+    width: 130px;         /* حجم اللوغو */
+    height: 130px;        /* يجب أن يكون الطول مساوياً للعرض */
+    border-radius: 50%;   /* تحويل المربع إلى دائرة */
+    object-fit: cover;    /* الحفاظ على أبعاد الصورة داخل الدائرة */
+    border: 4px solid #0056b3; /* إطار أزرق أنيق */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* تنسيق الأزرار */
+.link-btn {
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     width: 100%;
-    padding: 16px;
-    font-size: 18px;
+    padding: 15px;
+    margin-bottom: 12px;
+    font-size: 17px;
     font-weight: 600;
     text-decoration: none;
-    color: #0056b3;
-    border: 2px solid #0056b3;
     border-radius: 12px;
     transition: all 0.3s ease;
-    cursor: pointer;
+    border: 2px solid #0056b3;
+    color: #0056b3;
 }
 
-.link-btn i {
-    font-size: 22px;
-}
-
+/* تأثير التمرير على الأزرار */
 .link-btn:hover {
     background-color: #0056b3;
-    color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ألوان أيقونات محددة */
+.fa-whatsapp {
+    color: #25D366; /* لون الواتساب الأخضر */
+}
+
+.fa-map-marker-alt {
+    color: #FF5252; /* لون لوكيشن مميز */
+}
+
+/* عند التمرير تصبح الأيقونات بيضاء مع النص */
+.link-btn:hover i {
+    color: white;
 }
