@@ -101,20 +101,28 @@ body {
 
 
 /* تنسيق الحاوية الرئيسية */
+/* تنسيق الحاوية للتأكد من التوسط */
 .logo-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
 }
 
-/* جعل اللوغو العلوي دائرة مثالية */
+/* جعل اللوغو دائرة مثالية */
 .profile-img {
-    width: 130px;         /* حجم اللوغو */
-    height: 130px;        /* يجب أن يكون الطول مساوياً للعرض */
-    border-radius: 50%;   /* تحويل المربع إلى دائرة */
-    object-fit: cover;    /* الحفاظ على أبعاد الصورة داخل الدائرة */
-    border: 4px solid #0056b3; /* إطار أزرق أنيق */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 130px;           /* حجم ثابت للعرض */
+    height: 130px;          /* يجب أن يكون الارتفاع مطابقت للعرض تماماً */
+    border-radius: 50%;     /* هذا ما يجعلها دائرية */
+    object-fit: cover;      /* يضمن عدم تمدد الصورة داخل الدائرة */
+    
+    /* إضافة إطار وظل لجعلها تشبه الصورة المرفقة */
+    border: 1px solid #e0e0e0; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    
+    /* لضمان عدم تأثر الأبعاد بالـ Padding أو الـ Border */
+    box-sizing: border-box; 
 }
 
 /* تنسيق الأزرار */
